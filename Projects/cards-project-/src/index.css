@@ -1,0 +1,195 @@
+/* ================= GLOBAL SETTINGS ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background: #0e0e0e; 
+  color: #fff;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ================= STICKY SEARCH BAR ================= */
+/* Isse search bar top par fix ho jayega */
+.search-container {
+  position: sticky; /* Magic property */
+  top: 0;
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 1000; /* Taaki cards iske peeche rahein */
+  
+  /* Glassmorphism Effect: Scroll karne par background blur dikhega */
+  background: rgba(14, 14, 14, 0.8); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 25px;
+  padding-right: 55px;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; /* Thoda modern rectangular-round look */
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #007AFF; /* Blue focus border */
+  box-shadow: 0 0 20px rgba(0, 122, 255, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+/* ================= JOBS GRID ================= */
+.parent {
+  width: 100%;
+  max-width: 1300px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* ================= CARD DESIGN ================= */
+.card {
+  width: 100%;
+  max-width: 300px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 340px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Card Content Styles --- */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f8f8f8;
+  padding: 5px;
+}
+
+.top button {
+  padding: 5px 12px;
+  font-size: 11px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  background: white;
+  color: #666;
+}
+
+.center {
+  margin: 20px 0;
+}
+
+.center h3 {
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+
+.center h2 {
+  font-size: 20px;
+  color: #111;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+.tag {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tag h4 {
+  font-size: 10px;
+  padding: 5px 10px;
+  background: #f1f1f1;
+  color: #333;
+  border-radius: 6px;
+}
+
+.bottom {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom h3 {
+  font-size: 16px;
+  color: #111;
+}
+
+.bottom p {
+  font-size: 11px;
+  color: #999;
+}
+
+.bottom button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.no-result {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px;
+  color: #666;
+}
