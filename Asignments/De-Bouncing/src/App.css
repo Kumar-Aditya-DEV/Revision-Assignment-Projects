@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+}
+
+.container {
+  padding: 40px;
+  /* Elements ko center align karne ke liye */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+.search {
+  width: 60%;
+  max-width: 600px; /* Zyada badi screen par bahut failna na jaye */
+  padding: 12px;
+  margin: 0 auto 30px auto; /* Margin auto se horizontal centering pakki ho jati hai */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  display: block; /* block element banaya taaki margin: auto kaam kare */
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%; /* Puri width lega */
+  max-width: 1200px; /* Layout ko control mein rakhne ke liye */
+  justify-content: center; /* Grid items ko center mein rakhne ke liye */
+}
+
+.card {
+  background: white;
+  color: black; /* Black background par text white hona chahiye */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Content ko vertical stack karne ke liye */
+  align-items: flex-start; 
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.post {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.tags span {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.date {
+  color: gray;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+
+h1{
+  color: white;
+}
