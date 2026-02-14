@@ -1,0 +1,101 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #1f2937, #0f172a);
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Watch Card */
+.watch {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px 60px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  min-width: 420px;
+}
+
+/* Time Display */
+.time {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  font-variant-numeric: tabular-nums;
+  color: #f8fafc;
+}
+
+/* Buttons Wrapper */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Base Button */
+.buttons button {
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+/* Start */
+.start {
+  border-color: #22c55e;
+}
+
+.start:hover {
+  background: #22c55e;
+  color: #0f172a;
+}
+
+/* Stop */
+.stop {
+  border-color: #ef4444;
+}
+
+.stop:hover {
+  background: #ef4444;
+  color: #0f172a;
+}
+
+/* Reset */
+.reset {
+  border-color: #3b82f6;
+}
+
+.reset:hover {
+  background: #3b82f6;
+  color: #0f172a;
+}
+
+/* Active Click Effect */
+button:active {
+  transform: scale(0.96);
+}
