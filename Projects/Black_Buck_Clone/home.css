@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,6 @@ body {
   color: #fff;
 }
 
-/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -40,7 +38,6 @@ body {
   color: #fff;
 }
 
-/* LOGO */
 .logo {
   height: 30px;
 }
@@ -48,7 +45,6 @@ body {
   height: 100%;
 }
 
-/* ================= NAV NOTCH ================= */
 .nav-notch {
   position: fixed;
   top: 72px;
@@ -61,14 +57,12 @@ body {
   height: 100%;
 }
 
-/* ================= HERO ================= */
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
 }
 
-/* VIDEO */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -77,7 +71,6 @@ body {
   object-fit: cover;
 }
 
-/* CINEMATIC OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
@@ -91,10 +84,9 @@ body {
   z-index: 1;
 }
 
-/* ================= HERO CONTENT ================= */
 .hero-content {
   position: absolute;
-  bottom: 140px; /* screenshot jaisa */
+  bottom: 140px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -114,7 +106,6 @@ body {
   margin-top: 8px;
 }
 
-/* ================= EXPLORE BUTTON ================= */
 .btn {
   margin-top: 36px;
   padding: 14px 42px;
@@ -133,7 +124,7 @@ body {
   box-shadow: 0 0 20px rgba(225,29,72,0.6);
 }
 
-/* ================= BOTTOM COPYRIGHT ================= */
+
 .hero::after {
   content: "© 2024 BLACKBUCK";
   position: absolute;
@@ -145,7 +136,7 @@ body {
   z-index: 2;
 }
 
-/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
   .nav-left, .nav-right {
     display: none;
