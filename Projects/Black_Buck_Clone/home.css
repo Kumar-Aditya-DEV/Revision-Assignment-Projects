@@ -1,0 +1,160 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.nav-left a,
+.nav-right a {
+  color: #bdbdbd;
+  text-decoration: none;
+  margin: 0 14px;
+  font-size: 14px;
+}
+
+.nav-left a.active,
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #fff;
+}
+
+/* LOGO */
+.logo {
+  height: 30px;
+}
+.logo svg {
+  height: 100%;
+}
+
+/* ================= NAV NOTCH ================= */
+.nav-notch {
+  position: fixed;
+  top: 72px;
+  width: 100%;
+  height: 40px;
+  z-index: 90;
+}
+.nav-notch svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* VIDEO */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CINEMATIC OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%),
+    linear-gradient(to bottom,
+      rgba(0,0,0,0.9),
+      rgba(0,0,0,0.2),
+      rgba(0,0,0,0.9)
+    );
+  z-index: 1;
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  position: absolute;
+  bottom: 140px; /* screenshot jaisa */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 72px;
+  font-weight: 800;
+  color: #e11d48;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 26px;
+  letter-spacing: 5px;
+  margin-top: 8px;
+}
+
+/* ================= EXPLORE BUTTON ================= */
+.btn {
+  margin-top: 36px;
+  padding: 14px 42px;
+  border-radius: 50px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e11d48;
+  border-color: #e11d48;
+  box-shadow: 0 0 20px rgba(225,29,72,0.6);
+}
+
+/* ================= BOTTOM COPYRIGHT ================= */
+.hero::after {
+  content: "© 2024 BLACKBUCK";
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  z-index: 2;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .nav-left, .nav-right {
+    display: none;
+  }
+  .hero-content h1 {
+    font-size: 42px;
+  }
+  .hero-content p {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
