@@ -1,0 +1,238 @@
+body{
+    background-color: rgb(112, 67, 211);
+}
+.container{
+    background-color: white;
+    height: 750px;
+    width: 600px;
+    border-radius: 30px;
+    margin-left: 60vh;
+    margin-top: 10vh;
+}
+.container h1{
+    text-align: center;
+    font-weight: 20%;
+    font-size: 2.2em;
+    color: rgb(147, 108, 233);
+    padding-top: 2vh;
+}
+.subtitle{
+    padding-bottom: 1vh;
+    text-align: center;
+    color: #9f9595;
+}
+.score-section{
+    display: flex;
+    padding-left: 70px;
+    gap: 50px;
+}
+.score-box{
+    height: 100px;
+    width: 200px;
+    background-color: rgb(142, 100, 233);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: aliceblue;
+    padding-bottom: 20px;
+}
+.score{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    position: relative;
+    bottom: 10px;
+}
+.timer-section{
+    margin-top: 20px;
+    margin-left: 93px;
+    padding-top: 1px;
+    font-size: 10px;
+    background-color: aliceblue;
+    height: 12vh;
+    width: 28vw;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.timer{
+    font-size: 5em;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 10px;
+    font-weight: 550;
+    color: cornflowerblue;
+}
+.button-section{
+    display: flex;
+    flex-direction: column;
+    width: 28vw;
+    margin-left: 6.5vw;
+    margin-top: 20px;
+}
+.click-btn{
+    height: 8vh;
+    font-size: 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #c5c4c4;
+    border: none;
+    color: aliceblue;
+}
+.click-btn:active{
+    height: 8.4vh;
+    background-color: #9c6de9;
+    color: #282727;
+    transition: .1s;
+}
+.start-btn{
+    margin-top: 20px;
+    height: 5vh;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color:rgb(139, 102, 220);
+    color: aliceblue;
+    font-weight: 550;
+    border: none;
+}
+.start-btn:hover{
+    height: 5.3vh;
+    background-color: rgb(14, 194, 77);
+    transition: .5s;
+}
+.reset-btn{
+    margin-top: 20px;
+    height: 5vh;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(233, 62, 62);
+    font-weight: 550;
+    color: aliceblue;
+}
+.pause-btn{
+    margin-top: 20px;
+    height: 5vh;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(17, 62, 226);
+    font-weight: 550;
+    color: aliceblue;
+}
+.resume-btn{
+    height: 5vh;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(17, 62, 226);
+    font-weight: 550;
+    color: aliceblue;
+    position: relative;
+    bottom: 43px;
+    left: 245px;
+    display: none;
+}
+.reset-btn:hover{
+    height: 5.3vh;
+    background-color: rgb(231, 40, 40);
+}
+.pause-btn:hover{
+    height: 5.3vh;
+    background-color: rgb(51, 90, 234);
+}
+.resume-btn:hover{
+    height: 5.3vh;
+    background-color: rgb(51, 90, 234);
+}
+.status-message{
+    text-align: center;
+    position: relative;
+    top: 9px;
+    right: 2px;
+    font-weight: 650;
+    font-size: 17px;
+    color: #282727;
+}
+#winVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    z-index: -1;
+    opacity: -1;
+    transition: opacity 1s ease;
+}
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+        margin: 5vh auto;
+        height: auto;
+        padding: 20px;
+    }
+    .score-section {
+        padding-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .timer-section, .button-section {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 5vh auto;
+    }
+    .score-box {
+        width: 150px;
+        height: 80px;
+    }
+    .timer {
+        font-size: 3em;
+    }
+    .click-btn {
+        font-size: 20px;
+        height: 7vh;
+    }
+    .start-btn, .reset-btn, .pause-btn, .resume-btn {
+        height: 6vh;
+        font-size: 14px;
+    }
+    .resume-btn {
+        left: 0;
+        bottom: 0;
+        margin-top: 10px;
+        position: static;
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin: 3vh auto;
+        border-radius: 20px;
+    }
+    .container h1 {
+        font-size: 1.8em;
+    }
+    .score-section {
+        gap: 20px;
+    }
+    .timer-section {
+        height: auto;
+        font-size: 9px;
+    }
+    .timer {
+        font-size: 2.5em;
+    }
+    .button-section {
+        width: 90%;
+    }
+}
