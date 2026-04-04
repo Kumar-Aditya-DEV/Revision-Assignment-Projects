@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00E5FF; /* Aqua */
+  --color-secondary: #00B8D4; /* Darker Aqua */
+  --color-accent: #00E5FF;
+  --color-background: #0B0F14; /* Deep Dark */
+  --color-surface: #111827; /* Lighter Dark Card */
+  --color-surface-hover: #1F2937; /* Even Lighter on Hover */
+  --color-text-main: #E5E7EB; /* Light Gray */
+  --color-text-muted: #9CA3AF; /* Muted Gray */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-main min-h-screen overflow-x-hidden font-sans selection:bg-primary/30 selection:text-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-background font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:bg-secondary hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] focus:ring-4 focus:ring-primary/20 outline-none active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-text-main border border-white/5 font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:bg-surface-hover hover:border-primary/30 outline-none;
+  }
+
+  .glass-card {
+    @apply bg-surface border border-white/5 rounded-2xl p-8 shadow-2xl transition-all duration-300;
+  }
+  
+  .glass-card-hover {
+    @apply hover:border-primary/20 hover:shadow-[0_0_30px_rgba(0,229,255,0.05)];
+  }
+
+  .input-field {
+    @apply bg-surface/50 border border-white/10 rounded-xl px-4 py-3 text-text-main placeholder-text-muted focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all duration-300 w-full;
+  }
+
+  .table-row-hover {
+    @apply hover:bg-white/5 transition-colors duration-200 cursor-pointer;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-hover rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-text-muted/30;
+}
+
+/* Glow animations */
+@keyframes glow {
+  0%, 100% { opacity: 0.5; filter: blur(50px); }
+  50% { opacity: 0.8; filter: blur(70px); }
+}
+
+.bg-glow-primary {
+  @apply absolute -z-10 rounded-full bg-primary/10;
+  animation: glow 6s infinite alternate;
+}
