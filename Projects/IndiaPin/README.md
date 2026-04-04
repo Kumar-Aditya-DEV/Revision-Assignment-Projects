@@ -1,5 +1,8 @@
 # IndiaPin Directory
 
+🌐 **Live Demo:** [https://revision-assignment-projects.onrender.com](https://revision-assignment-projects.onrender.com)  
+📖 **Postman API Documentation:** [https://documenter.getpostman.com/view/50839415/2sBXiqDTaF](https://documenter.getpostman.com/view/50839415/2sBXiqDTaF)
+
 A modern, glassmorphic UI built with React to search for Indian pincodes and browse location information across states.
 
 ## How to Run
