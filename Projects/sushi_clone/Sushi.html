@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Clone</title>
+    <link rel="stylesheet" href="sushi.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="left-section">
+                <a href="#" class="logo">
+                    <img src="https://res.cloudinary.com/dcxu5wckd/image/upload/v1762000753/Screenshot_2025-11-01_175912_ppdszg.png"
+                        alt="Sushi Logo">
+
+
+                </a>
+                <nav id="nav">
+                    <a href="./Sushi-trade.html">Trade <span class="dropdown-arrow"><img
+                                src="https://res.cloudinary.com/dcxu5wckd/image/upload/v1761827091/stat_minus_1_24dp_666666_FILL0_wght400_GRAD0_opsz24_p6fvaa.svg"
+                                alt=""></span></a>
+                    <a href="#">Explore</a>
+                    <a href="./Sushi-position.html">Positions <span class="dropdown-arrow"><img
+                                src="https://res.cloudinary.com/dcxu5wckd/image/upload/v1761827091/stat_minus_1_24dp_666666_FILL0_wght400_GRAD0_opsz24_p6fvaa.svg"
+                                alt=""></span></a>
+                    <a href="#">Stake</a>
+                </nav>
+            </div>
+            <div class="right-section">
+                <div class="network-badge">
+                    <div class="network-icon">Ξ</div>
+                    <span>Ethereum</span>
+                </div>
+                <button class="connect-wallet">Connect Wallet</button>
+                <button class="mobile-menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="sushi-bar-section">
+        <div class="sushi-bar-container">
+            <div class="sushi-bar-header">
+                <div class="sushi-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="50" cy="50" rx="35" ry="20" fill="#ff6b6b" transform="rotate(-30 50 50)" />
+                        <ellipse cx="50" cy="50" rx="28" ry="16" fill="#ffa07a" transform="rotate(-30 50 50)" />
+                        <circle cx="35" cy="45" r="4" fill="#fff" />
+                    </svg>
+                </div>
+                <h1 class="sushi-bar-title">Sushi Bar</h1>
+            </div>
+
+            <p class="sushi-bar-description">
+                For every swap on Sushi, a portion of the swap fee is locked into the liquidity pool awaiting to be
+                served to xSUSHI holders.
+            </p>
+
+            <div class="sushi-bar-info">
+                <div class="info-item">
+                    <span class="info-label">APY (1m)</span>
+                    <span class="info-value underline">14.57%</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Network</span>
+                    <span class="info-value">Ethereum</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">XSUSHI</span>
+                    <span class="info-value">
+                        <a href="#">0x8798...4272
+                            <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <a href="#" class="learn-more-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Learn More
+            </a>
+        </div>
+    </section>
+
+
+
+    <div class="sushi-main-section">
+        <div class="sushi-main-container">
+
+            <div class="voting-power-card">
+                <div class="voting-power-label">
+                    Your Voting Power
+                    <span class="info-icon">?</span>
+                </div>
+                <div class="voting-power-value">0 SUSHI POWAH</div>
+                <a href="#" class="delegate-link">
+                    Delegate
+                    <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+
+
+            <div class="main-content-grid">
+
+                <div class="manage-card">
+                    <h2 class="card-title">Manage</h2>
+                    <p class="card-subtitle">Manage your position in the Sushi Bar.</p>
+
+
+                    <div class="tabs">
+                        <button class="tab active">Stake</button>
+                        <button class="tab">Unstake</button>
+                    </div>
+
+
+                    <div class="stake-info">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M7 7h10v10" />
+                        </svg>
+                        1 SUSHI ($0.51) = 0.635 XSUSHI ($0.51)
+                    </div>
+
+
+                    <div class="input-group">
+                        <div class="input-header">
+                            <div class="input-value">0.0</div>
+                            <div class="token-badge">
+                                <div class="token-icon sushi"></div>
+                                <span>SUSHI</span>
+                            </div>
+                        </div>
+                        <div class="usd-value">$ 0.00</div>
+                        <div class="balance-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                            </svg>
+                            <span>0.00</span>
+                        </div>
+                    </div>
+
+
+                    <div class="arrow-down">↓</div>
+
+
+                    <div class="input-group">
+                        <div class="input-header">
+                            <div class="input-value">0.0</div>
+                            <div class="token-badge">
+                                <div class="token-icon xsushi"></div>
+                                <span>XSUSHI</span>
+                            </div>
+                        </div>
+                        <div class="usd-value">$ 0.00</div>
+                        <div class="balance-info">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                            </svg>
+                            <span>0.00</span>
+                        </div>
+                    </div>
+
+
+                    <button class="connect-wallet-btn">Connect Wallet</button>
+                </div>
+
+
+                <div class="balance-card">
+                    <div class="balance-header">
+                        <h2 class="card-title">Your Balance</h2>
+                        <div class="balance-value">$0.00</div>
+                    </div>
+
+
+                    <div class="balance-section">
+                        <div class="balance-label">Staked</div>
+                        <div class="token-row">
+                            <div class="token-info">
+                                <div class="token-icon-small xsushi"></div>
+                                <span class="token-name">XSUSHI</span>
+                            </div>
+                            <div class="token-balance">
+                                <div class="token-amount">0</div>
+                                <div class="token-usd">$0.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="balance-section">
+                        <div class="balance-label">Available</div>
+                        <div class="token-row">
+                            <div class="token-info">
+                                <div class="token-icon-small sushi"></div>
+                                <span class="token-name">SUSHI</span>
+                            </div>
+                            <div class="token-balance">
+                                <div class="token-amount">0</div>
+                                <div class="token-usd">$0.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="chart-section">
+                        <div class="chart-tabs">
+                            <button class="chart-tab active">APR</button>
+                            <button class="chart-tab">Total Supply</button>
+                            <button class="chart-tab">1D</button>
+                            <button class="chart-tab">1W</button>
+                            <button class="chart-tab">1M</button>
+                            <button class="chart-tab">1Y</button>
+                            <button class="chart-tab">All</button>
+                        </div>
+
+                        <div class="chart-info">
+                            <div class="chart-value">8.53%</div>
+                            <div class="chart-date">30 Oct 2025 05:30</div>
+                        </div>
+
+                        <div class="chart-container">
+                            <svg class="chart-svg" viewBox="0 0 500 120" preserveAspectRatio="none">
+                                <polyline fill="none" stroke="#3b82f6" stroke-width="2"
+                                    points="0,90 20,85 40,80 60,75 80,70 100,68 120,65 140,62 160,58 180,55 200,50 220,48 240,45 260,42 280,45 300,50 320,48 340,52 360,60 380,70 400,80 420,85 440,88 460,85 480,82 500,80" />
+                                <circle cx="0" cy="90" r="3" fill="#3b82f6" />
+                                <circle cx="20" cy="85" r="3" fill="#3b82f6" />
+                                <circle cx="40" cy="80" r="3" fill="#3b82f6" />
+                                <circle cx="60" cy="75" r="3" fill="#3b82f6" />
+                                <circle cx="80" cy="70" r="3" fill="#3b82f6" />
+                                <circle cx="100" cy="68" r="3" fill="#3b82f6" />
+                                <circle cx="120" cy="65" r="3" fill="#3b82f6" />
+                                <circle cx="140" cy="62" r="3" fill="#3b82f6" />
+                                <circle cx="160" cy="58" r="3" fill="#3b82f6" />
+                                <circle cx="180" cy="55" r="3" fill="#3b82f6" />
+                                <circle cx="200" cy="50" r="3" fill="#3b82f6" />
+                                <circle cx="220" cy="48" r="3" fill="#3b82f6" />
+                                <circle cx="240" cy="45" r="3" fill="#3b82f6" />
+                                <circle cx="260" cy="42" r="3" fill="#3b82f6" />
+                                <circle cx="280" cy="45" r="3" fill="#3b82f6" />
+                                <circle cx="300" cy="50" r="3" fill="#3b82f6" />
+                                <circle cx="320" cy="48" r="3" fill="#3b82f6" />
+                                <circle cx="340" cy="52" r="3" fill="#3b82f6" />
+                                <circle cx="360" cy="60" r="3" fill="#3b82f6" />
+                                <circle cx="380" cy="70" r="3" fill="#3b82f6" />
+                                <circle cx="400" cy="80" r="3" fill="#3b82f6" />
+                                <circle cx="420" cy="85" r="3" fill="#3b82f6" />
+                                <circle cx="440" cy="88" r="3" fill="#3b82f6" />
+                                <circle cx="460" cy="85" r="3" fill="#3b82f6" />
+                                <circle cx="480" cy="82" r="3" fill="#3b82f6" />
+                                <circle cx="500" cy="80" r="3" fill="#3b82f6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
