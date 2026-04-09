@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 60px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo img {
+    height: 38px;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #cc3333;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 6px;
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.dropdown-menu a:hover {
+    background: #f9f9f9;
+    color: #cc3333;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.presence-section {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.presence-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.presence-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ef5b4c;
+}
+
+.presence-header .line {
+    width: 80px;
+    height: 2px;
+    background-color: #dcdcdc;
+}
+
+.presence-subtitle {
+    font-size: 18px;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.presence-map {
+    background: #faf3f1;
+    border-radius: 8px;
+    width: 90%;
+    margin: auto;
+}
+
+.presence-map iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+}
+
+.presence-legend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #222;
+}
+
+.legend-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.legend-item span {
+    line-height: 1.3;
+}
+
+.brands-section {
+    margin: 120px auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.brands-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.brands-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ef5b4c;
+}
+
+.brands-header .line {
+    width: 120px;
+    height: 2px;
+    background: #dcdcdc;
+}
+
+.brands-slider {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.brands-track {
+    display: flex;
+    gap: 80px;
+    width: max-content;
+    animation: scrollBrands 20s linear infinite;
+}
+
+.brand-item {
+    font-size: 28px;
+    font-weight: 500;
+    color: #9ec6e6;
+    white-space: nowrap;
+}
+
+.brand-logo img {
+    height: 50px;
+    object-fit: contain;
+}
+
+.brands-slider:hover .brands-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollBrands {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .brands-track {
+        gap: 40px;
+        animation-duration: 30s;
+    }
+
+    .brand-item {
+        font-size: 20px;
+    }
+
+    .brand-logo img {
+        height: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.footer-cta {
+    background: #c7362e;
+    margin: 120px auto 0;
+    padding: 60px 40px;
+    border-radius: 50px;
+    max-width: 1200px;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.cta-left h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.cta-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 40px;
+    font-size: 18px;
+}
+
+.cta-btn {
+    background: #fff;
+    color: #c7362e;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-footer {
+    background: #f5f5f5;
+    width: 100%;
+    padding: 80px 0 30px;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-logo h2 {
+    color: #c7362e;
+    font-size: 42px;
+    line-height: 1;
+}
+
+.footer-logo span {
+    font-weight: 400;
+}
+
+.footer-column h4 {
+    color: #c7362e;
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    padding-top: 7px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .cta-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .cta-points {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 18px 30px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .presence-header h2,
+    .brands-header h2,
+    .cta-left h2 {
+        font-size: 34px;
+    }
+
+    .presence-map iframe {
+        height: 420px;
+    }
+
+    .brands-track {
+        gap: 50px;
+        animation-duration: 25s;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 16px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    .hero-section {
+        padding: 20px 0;
+    }
+
+    .presence-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .presence-header h2 {
+        font-size: 30px;
+    }
+
+    .presence-subtitle {
+        font-size: 16px;
+    }
+
+    .presence-map {
+        width: 100%;
+    }
+
+    .presence-map iframe {
+        height: 320px;
+    }
+
+    .presence-legend {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .brands-header h2 {
+        font-size: 30px;
+    }
+
+    .brands-track {
+        gap: 30px;
+        animation-duration: 30s;
+    }
+
+    .brand-logo img {
+        height: 36px;
+    }
+
+    .footer-cta {
+        padding: 40px 25px;
+        border-radius: 30px;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .cta-left h2 {
+        font-size: 30px;
+    }
+
+    .cta-points {
+        grid-template-columns: 1fr;
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .presence-header h2,
+    .brands-header h2,
+    .cta-left h2 {
+        font-size: 26px;
+    }
+
+    .presence-map iframe {
+        height: 260px;
+    }
+
+    .brand-item {
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
