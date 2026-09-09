@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter Master | Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="arcade-nav">
+        <a href="../../index.html" class="nav-back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span>Arcade Hub</span>
+        </a>
+        <div class="nav-title">⚡ <span>Click Speed Test</span></div>
+        <button id="soundToggleBtn" class="sound-btn" title="Toggle Audio">🔊 Sound: ON</button>
+    </nav>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1>⚡ Click Speed Challenge</h1>
+            <p class="subtitle">Test your finger speed & reaction time!</p>
+        </header>
+
+        <div class="player-bar">
+            <div class="player-info">
+                <span class="player-avatar">👤</span>
+                <span id="playerDisplay" class="player-name">Player 1</span>
+                <button id="editNameBtn" class="edit-btn" title="Change Name">✏️</button>
+            </div>
+            <div class="mode-selector">
+                <span class="mode-label">Time:</span>
+                <button class="time-opt-btn active" data-time="5">5s</button>
+                <button class="time-opt-btn" data-time="10">10s</button>
+                <button class="time-opt-btn" data-time="30">30s</button>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card current-score">
+                <div class="stat-label">Current Clicks</div>
+                <div id="currentScore" class="stat-value">0</div>
+            </div>
+            <div class="stat-card cps-card">
+                <div class="stat-label">Live CPS</div>
+                <div id="cpsScore" class="stat-value">0.0</div>
+            </div>
+            <div class="stat-card high-score">
+                <div class="stat-label">Best Record</div>
+                <div id="highScore" class="stat-value">0</div>
+            </div>
+        </div>
+
+        <div class="timer-card">
+            <div class="timer-header">Time Remaining</div>
+            <div id="timer" class="timer-display">5.0s</div>
+            <div class="progress-bar-bg">
+                <div id="timerProgress" class="progress-bar-fill"></div>
+            </div>
+        </div>
+
+        <div class="click-target-container">
+            <button id="clickButton" class="click-target-btn" disabled>
+                <span class="click-icon">👆</span>
+                <span class="click-text">CLICK ME!</span>
+            </button>
+        </div>
+
+        <div class="control-actions">
+            <button id="startButton" class="btn btn-primary">🚀 Start Game</button>
+            <button id="pauseButton" class="btn btn-warning" disabled>⏸️ Pause</button>
+            <button id="resetButton" class="btn btn-danger">🔄 Reset Record</button>
+        </div>
+
+        <div id="statusMessage" class="status-badge">
+            Select duration & click "Start Game"!
+        </div>
+    </div>
+
+    <!-- Name Edit Modal -->
+    <div id="nameModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Enter Player Name</h3>
+            <input type="text" id="playerNameInput" placeholder="Your Name..." maxlength="15">
+            <div class="modal-actions">
+                <button id="saveNameBtn" class="btn btn-primary">Save</button>
+                <button id="closeModalBtn" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

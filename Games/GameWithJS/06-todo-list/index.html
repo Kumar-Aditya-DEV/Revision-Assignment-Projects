@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro | Todo & Productivity Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="arcade-nav">
+        <a href="../../index.html" class="nav-back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span>Arcade Hub</span>
+        </a>
+        <div class="nav-title">📑 <span>TaskMaster Planner</span></div>
+        <button id="soundToggleBtn" class="sound-btn" title="Toggle Audio">🔊 Sound: ON</button>
+    </nav>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1>📑 TaskMaster Productivity</h1>
+            <p class="subtitle">Organize your goals, tasks, and daily priority agenda.</p>
+        </header>
+
+        <div class="input-card">
+            <div class="input-row">
+                <input id="todo-input" type="text" placeholder="📝 Type a new task..." maxlength="60" />
+                <select id="priority-select" class="priority-dropdown">
+                    <option value="medium">⚡ Med</option>
+                    <option value="high">🔥 High</option>
+                    <option value="low">🌿 Low</option>
+                </select>
+                <button id="add-button" class="btn btn-add" title="Add Task">
+                    <i class="bx bx-plus"></i> Add
+                </button>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <div class="search-box">
+                <i class="bx bx-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="Search tasks..." />
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="active">Active</button>
+                <button class="filter-tab" data-filter="completed">Done</button>
+            </div>
+        </div>
+
+        <div class="bulk-actions">
+            <button id="delete-selected" class="btn btn-secondary">
+                <i class="bx bx-check-square"></i> Clear Completed
+            </button>
+            <button id="delete-all" class="btn btn-danger">
+                <i class="bx bx-trash"></i> Delete All
+            </button>
+        </div>
+
+        <ul id="all-todos" class="todos-list">
+            <!-- Dynamic Todo Items -->
+        </ul>
+
+        <footer class="task-footer">
+            <div class="counter-badge">
+                <span>Completed:</span> <strong id="c-count">0</strong>
+            </div>
+            <div class="counter-badge">
+                <span>Total Tasks:</span> <strong id="r-count">0</strong>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
